@@ -90,16 +90,16 @@ export type SampleRecords = Array<SampleRecord>;
 
 ## Supported variables
 
-|              | kind     | desc                                    |
-|--------------|----------|-----------------------------------------|
-| t            | value    | A string from the `-r` option           |
-| plural       | function | Pluralize a string                      |
-| singular     | function | Singularize a string                    |
-| camelCase    | function | Transform a string like `sampleRecord`  |
-| constantCase | function | Transform a string like `SAMPLE_RECORD` |
-| kebabCase    | function | Transform a string like `sample-record` |
-| pascalCase   | function | Transform a string like `SampleRecord`  |
-| snakeCase    | function | Transform a string like `sample_record` |
+|                | kind     | desc                                    |
+|----------------|----------|-----------------------------------------|
+| `t`            | value    | A string from the `-r` option           |
+| `plural`       | function | Pluralize a string                      |
+| `singular`     | function | Singularize a string                    |
+| `camelCase`    | function | Transform a string like `sampleRecord`  |
+| `constantCase` | function | Transform a string like `SAMPLE_RECORD` |
+| `kebabCase`    | function | Transform a string like `sample-record` |
+| `pascalCase`   | function | Transform a string like `SampleRecord`  |
+| `snakeCase`    | function | Transform a string like `sample_record` |
 
 ## Usage
 
@@ -110,9 +110,9 @@ Usage:
   $ sscg <name> [options]
 
 Options:
-  -r, --replacement <text>    The string that replaces tokens in templates
-  -o, --out <dir>             The output directory where generated codes are located
-  -d, --dir <dir>             The directory where templates are located (default: ./templates)
+  -r, --replacement <text>  The string that replaces tokens in templates
+  -o, --out <dir>           The output directory where generated codes are located
+  -d, --dir <dir>           The directory where templates are located (default: ./templates)
 
 Example:
   $ sscg model -r user -o ./models
