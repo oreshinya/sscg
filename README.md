@@ -38,7 +38,7 @@ $ mkdir templates/sample/some-dir
 $ touch templates/sample/some-dir/{{kebabCase[plural[t]]}}.ts.tpl
 ```
 
-**`sscg` can embed string into the file name by evaluating codes in `{{}}`.**
+**`sscg` can embed string into the file name by evaluating codes in `{{}}`, and you can use `[]` instead of `()` for calling function in file names.**
 
 Then, let's edit your `tpl` files.
 
