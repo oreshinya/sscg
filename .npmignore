@@ -1,0 +1,6 @@
+.github
+node_modules
+templates
+outputs
+biome.json
+shell.nix
