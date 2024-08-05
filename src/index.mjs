@@ -24,33 +24,38 @@ const HELPERS = {
   snakeCase,
 };
 
-function compile(opts, str) {
+function compile(opts, str, preprocess) {
   const ctx = { t: opts.replacement, ...HELPERS };
   return str.replace(/\{\{(.+?)\}\}/g, (_, expression) => {
-    const exp = expression.trim();
+    const trimmed = expression.trim();
+    const exp = preprocess(trimmed);
     try {
       const func = new Function(...Object.keys(ctx), `return ${exp};`);
       return func(...Object.values(ctx));
     } catch (error) {
-      console.error(chalk.red(`Evaluation was failed:\n  ${exp}`));
+      console.error(chalk.red(`Evaluation was failed:\n  ${trimmed}`));
       process.exit(1);
     }
   });
 }
 
+function compileBody(opts, tplBody) {
+  return compile(opts, tplBody, (expression) => expression);
+}
+
 function compilePath(opts, tplDir, tplPath) {
-  const preprocessed = join(opts.out, relative(tplDir, tplPath))
-    .replace(/\.tpl$/, "")
-    .replace(/\[/g, "(")
-    .replace(/\]/g, ")");
-  return compile(opts, preprocessed);
+  return compile(
+    opts,
+    join(opts.out, relative(tplDir, tplPath)),
+    (expression) => expression.replace(/\[/g, "(").replace(/\]/g, ")"),
+  ).replace(/\.tpl$/, "");
 }
 
 async function generate(opts, tplDir, dirent) {
   const { name, parentPath } = dirent;
   const tplPath = join(parentPath, name);
   const tplBody = await readFile(tplPath, { encoding: "utf8" });
-  const content = compile(opts, tplBody);
+  const content = compileBody(opts, tplBody);
   const outputPath = compilePath(opts, tplDir, tplPath);
   await mkdir(dirname(outputPath), { recursive: true });
   await writeFile(outputPath, content, { encoding: "utf8" });
