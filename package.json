@@ -7,9 +7,10 @@
     "lint": "biome ci ./src",
     "lintfix": "biome check --write ./src"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [ "generator", "template", "boilerplate", "cli" ],
+  "author": "oreshinya",
   "license": "MIT",
+  "repository": "oreshinya/sscg",
   "dependencies": {
     "chalk": "^5.3.0",
     "change-case": "^5.4.4",
