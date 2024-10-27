@@ -2,15 +2,20 @@
   "name": "sscg",
   "version": "1.0.0",
   "description": "The super simple code generator",
+  "keywords": [
+    "generator",
+    "template",
+    "boilerplate",
+    "cli"
+  ],
+  "author": "oreshinya",
+  "license": "MIT",
+  "repository": "oreshinya/sscg",
   "bin": "src/index.mjs",
   "scripts": {
     "lint": "biome ci ./src",
     "lintfix": "biome check --write ./src"
   },
-  "keywords": [ "generator", "template", "boilerplate", "cli" ],
-  "author": "oreshinya",
-  "license": "MIT",
-  "repository": "oreshinya/sscg",
   "dependencies": {
     "chalk": "^5.3.0",
     "change-case": "^5.4.4",
@@ -20,5 +25,5 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4"
   },
-  "packageManager": "pnpm@9.6.0+sha256.dae0f7e822c56b20979bb5965e3b73b8bdabb6b8b8ef121da6d857508599ca35"
+  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228"
 }
