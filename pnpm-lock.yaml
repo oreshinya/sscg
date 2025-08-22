@@ -10,7 +10,7 @@ importers:
     dependencies:
       chalk:
         specifier: ^5.3.0
-        version: 5.4.1
+        version: 5.6.0
       change-case:
         specifier: ^5.4.4
         version: 5.4.4
@@ -80,8 +80,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  chalk@5.4.1:
-    resolution: {integrity: sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==}
+  chalk@5.6.0:
+    resolution: {integrity: sha512-46QrSQFyVSEyYAgQ22hQ+zDa60YHA4fBstHmtSApj1Y5vKtG27fWowW03jCk5KcbXEWPZUIR894aARCA/G1kfQ==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
   change-case@5.4.4:
@@ -132,7 +132,7 @@ snapshots:
   '@biomejs/cli-win32-x64@1.9.4':
     optional: true
 
-  chalk@5.4.1: {}
+  chalk@5.6.0: {}
 
   change-case@5.4.4: {}
 
