@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, extname, join, relative } from "node:path";
 import chalk from "chalk";
 import {
@@ -12,6 +12,7 @@ import {
 } from "change-case";
 import meow from "meow";
 import pluralize from "pluralize";
+
 const { plural, singular } = pluralize;
 
 const HELPERS = {
@@ -32,7 +33,7 @@ function compile(opts, str, preprocess) {
     try {
       const func = new Function(...Object.keys(ctx), `return ${exp};`);
       return func(...Object.values(ctx));
-    } catch (error) {
+    } catch {
       console.error(chalk.red(`Evaluation was failed:\n  ${trimmed}`));
       process.exit(1);
     }
