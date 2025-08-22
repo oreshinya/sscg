@@ -1,0 +1,13 @@
+inputs:
+  registry-url:
+    description: The registry url for publishing.
+runs:
+  using: "composite"
+  steps:
+    - run: corepack enable
+      shell: bash
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 22
+        cache: "pnpm"
+        registry-url: ${{ inputs.registry-url }}
