@@ -19,7 +19,7 @@
   "dependencies": {
     "chalk": "^5.3.0",
     "change-case": "^5.4.4",
-    "meow": "^13.2.0",
+    "meow": "^14.0.0",
     "pluralize": "^8.0.0"
   },
   "devDependencies": {
