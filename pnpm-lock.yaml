@@ -16,7 +16,7 @@ importers:
         version: 5.4.4
       meow:
         specifier: ^14.0.0
-        version: 14.0.0
+        version: 14.1.0
       pluralize:
         specifier: ^8.0.0
         version: 8.0.0
@@ -87,8 +87,8 @@ packages:
   change-case@5.4.4:
     resolution: {integrity: sha512-HRQyTk2/YPEkt9TnUPbOpr64Uw3KOicFWPVBb+xiHvd6eBx/qPr9xqfBFDT8P2vWsvvz4jbEkfDe71W3VyNu2w==}
 
-  meow@14.0.0:
-    resolution: {integrity: sha512-JhC3R1f6dbspVtmF3vKjAWz1EVIvwFrGGPLSdU6rK79xBwHWTuHoLnRX/t1/zHS1Ch1Y2UtIrih7DAHuH9JFJA==}
+  meow@14.1.0:
+    resolution: {integrity: sha512-EDYo6VlmtnumlcBCbh1gLJ//9jvM/ndXHfVXIFrZVr6fGcwTUyCTFNTLCKuY3ffbK8L/+3Mzqnd58RojiZqHVw==}
     engines: {node: '>=20'}
 
   pluralize@8.0.0:
@@ -136,6 +136,6 @@ snapshots:
 
   change-case@5.4.4: {}
 
-  meow@14.0.0: {}
+  meow@14.1.0: {}
 
   pluralize@8.0.0: {}
