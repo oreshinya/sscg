@@ -23,7 +23,7 @@
     "pluralize": "^8.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.4"
+    "@biomejs/biome": "2.4.5"
   },
   "publishConfig": {
     "access": "public",
