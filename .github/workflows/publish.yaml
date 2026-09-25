@@ -14,5 +14,3 @@ jobs:
         with:
           registry-url: "https://registry.npmjs.org"
       - run: pnpm publish --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
