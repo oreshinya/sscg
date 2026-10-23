@@ -17,13 +17,13 @@
     "lintfix": "biome check --write ./src"
   },
   "dependencies": {
-    "chalk": "^6.0.0",
+    "chalk": "^6.0.1",
     "change-case": "^5.4.4",
-    "meow": "^14.0.0",
+    "meow": "^14.1.0",
     "pluralize": "^8.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.14"
+    "@biomejs/biome": "2.6.2"
   },
   "publishConfig": {
     "access": "public",
